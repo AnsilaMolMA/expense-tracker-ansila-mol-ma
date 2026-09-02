@@ -128,6 +128,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 button, input, select, textarea {
@@ -538,6 +539,8 @@ a {
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .card-header-flex {
@@ -578,6 +581,12 @@ a {
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#categoryChart {
+  max-width: 100% !important;
 }
 
 .chart-empty-state {
@@ -1506,6 +1515,12 @@ a {
 
   .summary-card {
     padding: 1rem;
+  }
+
+  .chart-wrapper {
+    min-height: 290px;
+    max-height: 340px;
+    padding: 0.25rem 0;
   }
 
   .card-value {

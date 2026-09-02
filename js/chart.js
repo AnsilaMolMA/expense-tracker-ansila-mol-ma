@@ -81,6 +81,8 @@ const ChartService = {
 
     const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
     const textColor = isDarkMode ? '#cbd5e1' : '#475569';
+    const isMobile = window.innerWidth < 640;
+    const legendPosition = isMobile ? 'bottom' : 'right';
 
     // If chart already exists, update data directly for smooth transitions
     if (this.chartInstance) {
@@ -88,6 +90,9 @@ const ChartService = {
       this.chartInstance.data.datasets[0].data = dataValues;
       this.chartInstance.data.datasets[0].backgroundColor = backgroundColors;
       this.chartInstance.options.plugins.legend.labels.color = textColor;
+      this.chartInstance.options.plugins.legend.position = legendPosition;
+      this.chartInstance.options.plugins.legend.labels.padding = isMobile ? 8 : 12;
+      this.chartInstance.options.plugins.legend.labels.font.size = isMobile ? 10 : 11;
       this.chartInstance.update();
       return;
     }
@@ -109,20 +114,20 @@ const ChartService = {
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        cutout: '68%',
+        cutout: isMobile ? '60%' : '68%',
         layout: {
-          padding: 8
+          padding: 6
         },
         plugins: {
           legend: {
-            position: 'right',
+            position: legendPosition,
             labels: {
-              boxWidth: 12,
-              padding: 12,
+              boxWidth: 10,
+              padding: isMobile ? 8 : 12,
               color: textColor,
               font: {
                 family: "'Plus Jakarta Sans', sans-serif",
-                size: 11,
+                size: isMobile ? 10 : 11,
                 weight: '600'
               }
             }
@@ -151,6 +156,28 @@ const ChartService = {
         }
       }
     });
+
+    // Auto-update legend position on window resize
+    if (!this._resizeAttached) {
+      this._resizeAttached = true;
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (this.chartInstance) {
+            const mobileNow = window.innerWidth < 640;
+            const newPos = mobileNow ? 'bottom' : 'right';
+            if (this.chartInstance.options.plugins.legend.position !== newPos) {
+              this.chartInstance.options.plugins.legend.position = newPos;
+              this.chartInstance.options.plugins.legend.labels.padding = mobileNow ? 8 : 12;
+              this.chartInstance.options.plugins.legend.labels.font.size = mobileNow ? 10 : 11;
+              this.chartInstance.options.cutout = mobileNow ? '60%' : '68%';
+              this.chartInstance.update();
+            }
+          }
+        }, 200);
+      });
+    }
   },
 
   /**
