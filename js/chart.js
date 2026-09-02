@@ -43,7 +43,7 @@ const ChartService = {
       }
       canvas.classList.add('hidden');
       if (emptyState) emptyState.classList.remove('hidden');
-      if (totalBadge) totalBadge.textContent = 'Total: $0.00';
+      if (totalBadge) totalBadge.textContent = 'Total: ₹0.00';
       return;
     }
 
@@ -62,7 +62,7 @@ const ChartService = {
     });
 
     if (totalBadge) {
-      totalBadge.textContent = `Total: $${totalExpenseAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+      totalBadge.textContent = `Total: ₹${totalExpenseAmount.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
     }
 
     // Sort categories descending by amount
@@ -139,7 +139,7 @@ const ChartService = {
                 const percentage = totalExpenseAmount > 0 
                   ? ((value / totalExpenseAmount) * 100).toFixed(1)
                   : 0;
-                return ` $${value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} (${percentage}%)`;
+                return ` ₹${value.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} (${percentage}%)`;
               }
             }
           }

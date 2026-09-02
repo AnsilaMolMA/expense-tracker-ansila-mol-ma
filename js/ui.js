@@ -81,10 +81,9 @@ const UIService = {
    * Currency formatter utility
    */
   formatCurrency(num) {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 2,
+      currency: 'INR',
       maximumFractionDigits: 2
     }).format(Number(num) || 0);
   },
@@ -525,10 +524,10 @@ const UIService = {
       this.setFieldError(this.elements.txAmount, this.elements.amountError, 'Please enter a valid amount.');
       isValid = false;
     } else if (isNaN(amountVal) || amountVal <= 0) {
-      this.setFieldError(this.elements.txAmount, this.elements.amountError, 'Amount must be greater than $0.00.');
+      this.setFieldError(this.elements.txAmount, this.elements.amountError, 'Amount must be greater than ₹0.00.');
       isValid = false;
-    } else if (amountVal > 10000000) {
-      this.setFieldError(this.elements.txAmount, this.elements.amountError, 'Amount exceeds maximum limit ($10,000,000).');
+    } else if (amountVal > 100000000) {
+      this.setFieldError(this.elements.txAmount, this.elements.amountError, 'Amount exceeds maximum limit (₹10,00,00,000).');
       isValid = false;
     }
 

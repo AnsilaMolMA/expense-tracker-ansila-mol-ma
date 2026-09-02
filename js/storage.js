@@ -4,9 +4,9 @@
  */
 
 const STORAGE_KEYS = {
-  TRANSACTIONS: 'trackwise_transactions_v1',
+  TRANSACTIONS: 'trackwise_transactions_v2',
   THEME: 'trackwise_theme_pref',
-  FIRST_RUN: 'trackwise_has_visited'
+  FIRST_RUN: 'trackwise_has_visited_v2'
 };
 
 // Standard Predefined Categories with icons/emojis and types
@@ -34,12 +34,12 @@ const CATEGORIES = {
   ]
 };
 
-// Initial realistic demo transactions so reviewers have immediate data to explore
+// Initial realistic demo transactions in Indian Rupee (INR)
 const DEMO_TRANSACTIONS = [
   {
     id: 'demo-1',
     type: 'income',
-    amount: 4500.00,
+    amount: 75000.00,
     category: 'Salary',
     date: '2026-09-01',
     description: 'Monthly Software Engineer Salary'
@@ -47,7 +47,7 @@ const DEMO_TRANSACTIONS = [
   {
     id: 'demo-2',
     type: 'expense',
-    amount: 1200.00,
+    amount: 18000.00,
     category: 'Housing',
     date: '2026-09-02',
     description: 'Apartment Monthly Rent'
@@ -55,7 +55,7 @@ const DEMO_TRANSACTIONS = [
   {
     id: 'demo-3',
     type: 'expense',
-    amount: 145.50,
+    amount: 4500.00,
     category: 'Groceries',
     date: '2026-09-02',
     description: 'Weekly Organic Grocery Run'
@@ -63,7 +63,7 @@ const DEMO_TRANSACTIONS = [
   {
     id: 'demo-4',
     type: 'income',
-    amount: 750.00,
+    amount: 25000.00,
     category: 'Freelance',
     date: '2026-08-28',
     description: 'UI/UX Design Consultation project'
@@ -71,50 +71,50 @@ const DEMO_TRANSACTIONS = [
   {
     id: 'demo-5',
     type: 'expense',
-    amount: 85.00,
+    amount: 2200.00,
     category: 'Utilities',
     date: '2026-08-25',
-    description: 'High-speed Fiber Internet & Power'
+    description: 'High-speed Fiber Internet & Electricity Bill'
   },
   {
     id: 'demo-6',
     type: 'expense',
-    amount: 62.40,
+    amount: 1850.00,
     category: 'Dining Out',
     date: '2026-08-22',
-    description: 'Dinner with friends at Bistro'
+    description: 'Dinner with family at Restaurant'
   },
   {
     id: 'demo-7',
     type: 'expense',
-    amount: 55.00,
+    amount: 3000.00,
     category: 'Transportation',
     date: '2026-08-18',
-    description: 'Gasoline & Metro transit card reload'
+    description: 'Petrol & Metro Smart Card Recharge'
   },
   {
     id: 'demo-8',
     type: 'income',
-    amount: 180.00,
+    amount: 5500.00,
     category: 'Investments',
     date: '2026-08-15',
-    description: 'Quarterly Index Fund Dividends'
+    description: 'Quarterly Mutual Fund & Stock Dividends'
   },
   {
     id: 'demo-9',
     type: 'expense',
-    amount: 120.00,
+    amount: 1499.00,
     category: 'Entertainment',
     date: '2026-08-10',
-    description: 'Concert Tickets & Streaming Subscriptions'
+    description: 'Cinema Tickets & OTT Subscriptions'
   },
   {
     id: 'demo-10',
     type: 'expense',
-    amount: 95.00,
+    amount: 1250.00,
     category: 'Healthcare',
     date: '2026-08-04',
-    description: 'Prescription refills & Vitamins'
+    description: 'Prescription Medicines & Health Supplements'
   }
 ];
 
