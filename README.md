@@ -45,7 +45,7 @@ Because this application is built with standard vanilla web technologies (HTML, 
 ### Method 1: Direct File Open (Easiest)
 1. Navigate to the project directory:
    ```bash
-   expense-tracker-candidate-name/
+   expense-tracker-ansila-mol-ma/
    ```
 2. Double-click **`index.html`** or right-click and select **Open with Google Chrome** (or Edge / Firefox / Safari).
 
@@ -72,7 +72,7 @@ npx serve .
 ## 📂 Project Structure
 
 ```
-expense-tracker-candidate-name/
+expense-tracker-ansila-mol-ma/
 ├── index.html              # Semantic HTML5 markup, accessible modal dialogs, dashboard layout
 ├── css/
 │   └── styles.css          # CSS custom variables, light & dark theme, responsive grid/flexbox, transitions
