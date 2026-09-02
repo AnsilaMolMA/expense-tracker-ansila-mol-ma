@@ -81,7 +81,7 @@ expense-tracker-ansila-mol-ma/
 │   ├── chart.js            # Chart.js doughnut chart integration and theme color coordinator
 │   ├── ui.js               # DOM rendering, modal manager, validation messages, toast notifications
 │   └── app.js              # State manager, event listeners, sorting, filtering, and summary calculations
-├── README.md               # Project documentation and submission instructions
+├── README.md               # Project documentation and feature guide
 └── .gitignore              # Ignored files (OS, IDE, logs)
 ```
 
