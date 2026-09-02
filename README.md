@@ -87,45 +87,6 @@ expense-tracker-candidate-name/
 
 ---
 
-## 🛠️ Step-by-Step GitHub Submission Guide
-
-Follow these steps to submit your completed project:
-
-### 1. Rename Folder (Optional)
-Replace `candidate-name` with your actual name or username:
-```bash
-# Example:
-mv expense-tracker-candidate-name expense-tracker-john-doe
-cd expense-tracker-john-doe
-```
-
-### 2. Initialize Git & Create Initial Commit
-```bash
-git init
-git add .
-git commit -m "feat: complete expense tracker application with responsive UI, local storage, and analytics"
-```
-
-### 3. Create a New Repository on GitHub
-1. Go to [github.com/new](https://github.com/new).
-2. Set the repository name as instructed: `expense-tracker-<your-name>`.
-3. Keep it **Public**.
-4. Do not initialize with a README (you already have this one).
-
-### 4. Push to GitHub
-```bash
-# Link to your remote GitHub repository:
-git remote add origin https://github.com/<your-username>/expense-tracker-<your-name>.git
-git branch -M main
-git push -u origin main
-```
-
-### 5. Final Submission
-- Copy your GitHub repository link: `https://github.com/<your-username>/expense-tracker-<your-name>`
-- Submit the link before the deadline (5:00 p.m. on Thursday 3rd September 2026).
-
----
-
 ## 💡 Technical Design Highlights
 
 - **Separation of Concerns**: Modular JavaScript design divides data persistence (`storage.js`), visualization (`chart.js`), DOM rendering/validation (`ui.js`), and business logic (`app.js`).
