@@ -6,7 +6,7 @@
 
 ## Dashboard Preview
 
-![Expense Tracker Dashboard](images/dashboard.png)
+![Expense Tracker Dashboard](dashboard.png)
 
 ---
 
