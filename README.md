@@ -4,6 +4,12 @@
 
 ---
 
+## Dashboard Preview
+
+![Expense Tracker Dashboard](images/dashboard.png)
+
+---
+
 ## 📋 Features Checklist
 
 ### Core Requirements
